@@ -3,8 +3,6 @@ from sqlalchemy import Column, DateTime, Float, ForeignKey, Integer, String
 
 
 class User(db.Model):
-    __tablename__ = 'users'
-
     user_id = Column(Integer, nullable=False, primary_key=True)
     username = Column(String, nullable=False, unique=True)
     password = Column(String, nullable=False)
@@ -17,8 +15,6 @@ class User(db.Model):
 
 
 class Album(db.Model):
-    __tablename__ = 'albums'
-
     album_id = Column(Integer, nullable=False, primary_key=True)
     album_name = Column(String, nullable=False)
     artist = Column(String, nullable=False)
@@ -31,7 +27,6 @@ class Album(db.Model):
 
 
 class Like(db.Model):
-    __tablename__ = 'likes'
-    user_id = Column(Integer, ForeignKey('users.user_id'), primary_key=True)
-    album_id = Column(Integer, ForeignKey('albums.album_id'), primary_key=True)
+    user_id = Column(Integer, ForeignKey('user.user_id'), primary_key=True)
+    album_id = Column(Integer, ForeignKey('album.album_id'), primary_key=True)
     like_time = Column(DateTime, nullable=False)
