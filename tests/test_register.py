@@ -15,7 +15,6 @@ class TestRegister:
     SECCESS = '/connect-page'
     USER_EXIST = 'user_exist=true'
 
-
     @staticmethod
     def test_register_get_page(client):
         assert client.get(TestRegister.REGISTER).status_code == HTTP_OK
@@ -52,7 +51,6 @@ class TestRegister:
         }
         resp = client.post(TestRegister.REGISTER_POST, data=data)
         assert TestRegister.USER_EXIST and TestRegister.REGISTER in resp.location
-
 
     @staticmethod
     @pytest.mark.parametrize("username, password, name, birthday, country", POSSIBLE_MISSING_FIELD)

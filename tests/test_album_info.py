@@ -48,7 +48,6 @@ class TestAlbumInfo:
         assert '/connect-page' in client.get(TestAlbumInfo.ALBUM_URL).location
         assert client.get(TestAlbumInfo.ALBUM_URL).status_code == REDIRECT
 
-
     @staticmethod
     def test_info_valid_album(client, db_session, user, mocker):
         TestAlbumInfo.connect(client)
@@ -69,7 +68,6 @@ class TestAlbumInfo:
         resp = client.get(TestAlbumInfo.ALBUM_URL)
         assert resp.status_code == REDIRECT
         assert resp.location == 'http://localhost/'
-
 
     @staticmethod
     def test_info_valid_album_with_like(client, db_session, user, album, like, mocker):
