@@ -72,7 +72,7 @@
             <td> {{ album.rate}} </td>
             {% endif %}
             {% if album.image_path is none or album.image_path == ""  %}
-            <td><img class="small-album" src="/static/images/no-image-icon-23500.jpg" alt="No image">
+            <td><img style='width: 3em' src="/static/images/no-image-icon-23500.jpg" alt="No image">
             </td>
             {% else %}
             <td><img style='width: 3em' src="{{ album.image_path}}" alt="No image">
