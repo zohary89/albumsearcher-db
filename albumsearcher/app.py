@@ -6,7 +6,6 @@ from albumsearcher.db import db
 import bcrypt
 from flask import Flask, g, redirect, render_template, request, session, url_for
 
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY') or "SECRET"
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'sqlite://'
