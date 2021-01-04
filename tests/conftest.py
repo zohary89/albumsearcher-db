@@ -1,18 +1,22 @@
+from datetime import datetime
+
 from albumsearcher import crud_actions
-from albumsearcher.app import app
+from albumsearcher.app import create_app
 from albumsearcher.db import db
 from albumsearcher.mapping import Album, Like 
-from datetime import datetime
 import pytest
 
 
-# הבדיקות מבוססות על דטה בייס בזיכרון
-# Using the following line in app.py:
-# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'sqlite://'
+configs = {
+    'SQLALCHEMY_DATABASE_URI': 'sqlite://',
+    'SECRET_KEY': "SECRET",
+    'TESTING': True
+}
+app = create_app(**configs)
+
+
 @pytest.fixture
 def client():
-    app.config["TESTING"] = True
-
     ctx = app.test_request_context()
     ctx.push()
 
