@@ -1,5 +1,5 @@
-from albumsearcher.db import db
 from albumsearcher import routes
+from albumsearcher.db import db
 from flask import Flask
 
 
@@ -10,5 +10,3 @@ def create_app(**configs):
     db.init_app(app)
     app.register_blueprint(routes.bp)
     return app
-
-    
