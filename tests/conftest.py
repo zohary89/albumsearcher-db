@@ -46,7 +46,7 @@ def user():
 def album():
     album = Album(
         album_id="2115888", album_name="Echoes of Silence", artist="The Weeknd", year="2011", rate="9", image_path="https://www.theaudiodb.com/images/media/album/thumb/xwvwvp1342551819.jpg"
-        )
+    )
     db.session.add(album)
     db.session.commit()
     yield album
@@ -56,8 +56,7 @@ def album():
 
 @pytest.fixture
 def like(user, album):
-    like = Like(
-            user_id=user.user_id, album_id=album.album_id, like_time=datetime.now())
+    like = Like(user_id=user.user_id, album_id=album.album_id, like_time=datetime.now())
     db.session.add(like)
     db.session.commit()
     yield like
@@ -69,7 +68,7 @@ def like(user, album):
 def album2():
     album = Album(
         album_id="2115777", album_name="Trilogy", artist="The Weeknd", year="2012", rate="8", image_path=None
-        )
+    )
     db.session.add(album)
     db.session.commit()
     yield album
@@ -79,8 +78,7 @@ def album2():
 
 @pytest.fixture
 def like2(user, album2):
-    like = Like(
-            user_id=user.user_id, album_id=album2.album_id, like_time=datetime.now())
+    like = Like(user_id=user.user_id, album_id=album2.album_id, like_time=datetime.now())
     db.session.add(like)
     db.session.commit()
     yield like

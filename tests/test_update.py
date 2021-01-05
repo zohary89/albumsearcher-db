@@ -37,9 +37,9 @@ class TestUpdate:
         data2 = {
             'user-name': 'daniel',
             'psw': '1234',
-            }
+        }
         resp2 = client.post('/connect', data=data2, follow_redirects=True)  # בדיקה שמתחבר עם שם המשתמש החדש לאחר עדכון פרטים.
-        assert b'daniel' in resp.data
+        assert b'daniel' in resp2.data
 
     @staticmethod
     def test_fail_update(client, user):

@@ -1,5 +1,3 @@
-from pytest_mock import mocker
-
 HTTP_OK = 200
 REDIRECT = 302
 
@@ -12,22 +10,24 @@ ALBUM_INFO = {
             "strArtist": "The Weeknd",
             "strAlbumThumb": "https://www.theaudiodb.com/images/media/album/thumb/xwvwvp1342551819.jpg",
             "strDescriptionEN": "........."
-            }
-            ]}
+        }
+    ]
+}
 
 TRACKS = {
-    "track":[
+    "track": [
         {
-            "idTrack":"32793500",
-            "idAlbum":"2115888",
-            "strTrack":"D.D."
-            },
+            "idTrack": "32793500",
+            "idAlbum": "2115888",
+            "strTrack": "D.D."
+        },
         {
-            "idTrack":"32793501",
-            "idAlbum":"2115888",
-            "strTrack":"Montreal"
-            }
-            ]}
+            "idTrack": "32793501",
+            "idAlbum": "2115888",
+            "strTrack": "Montreal"
+        }
+    ]
+}
 
 NO_ALBUM = {"album": None}
 

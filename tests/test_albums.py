@@ -1,19 +1,19 @@
-from pytest_mock import mocker
-
 HTTP_OK = 200
 REDIRECT = 302
 
 ARTIST_ALBUMS = {
     "album": [
         {
-            "idAlbum":"2139279",
-            "idArtist":"115909",
-            "strAlbum":"Colour the Small One",
-            "strArtist":"Sia",
-            "intYearReleased":"2004",
-            "strAlbumThumb":"https://www.theaudiodb.com/images/media/album/thumb/colour-the-small-one-4f593165326e9.jpg","intScore":"8.3"
-            }
-            ]}
+            "idAlbum": "2139279",
+            "idArtist": "115909",
+            "strAlbum": "Colour the Small One",
+            "strArtist": "Sia",
+            "intYearReleased": "2004",
+            "strAlbumThumb": "https://www.theaudiodb.com/images/media/album/thumb/colour-the-small-one-4f593165326e9.jpg",
+            "intScore": "8.3"
+        }
+    ]
+}
 
 ARTIST_DETAILS = {
     "artists": [
@@ -21,10 +21,12 @@ ARTIST_DETAILS = {
             "idArtist": "115909",
             "strArtist": "Sia",
             "strArtistLogo": "https://www.theaudiodb.com/images/media/artist/logo/qyrvtr1582224564.png"
-            }
-            ]}
+        }
+    ]
+}
 
 NO_ARTIST = {"album": None}
+
 
 class TestAlbums:
     ALBUMS_URL = '/albums'

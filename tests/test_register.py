@@ -9,6 +9,7 @@ POSSIBLE_MISSING_FIELD = [
     ('dani', '', '', '1.11.1990', 'israel'),
 ]
 
+
 class TestRegister:
     REGISTER = '/register-page'
     REGISTER_POST = '/register'

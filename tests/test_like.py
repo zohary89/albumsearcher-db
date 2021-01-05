@@ -1,6 +1,6 @@
-from albumsearcher.mapping import Album, Like
 from datetime import datetime
-from pytest_mock import mocker
+
+from albumsearcher.mapping import Album, Like
 
 HTTP_OK = 200
 REDIRECT = 302
@@ -15,8 +15,10 @@ ALBUM_INFO = {
             "intYearReleased": "1995",
             "intScore": "8",
             "strAlbumThumb": "https://www.theaudiodb.com/images/media/album/thumb/xwvwvp1342551819.jpg",
-            }
-            ]}
+        }
+    ]
+}
+
 
 class TestLike:
     LIKE_URL = '/like'
